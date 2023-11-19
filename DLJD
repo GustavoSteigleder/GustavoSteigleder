@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> PROTÓTIPO DICIONÁRIO DE LIBRAS PARA MONTADORES JOHN DEERE</title>
+    
+    <style>
+        body {
+            background-color: #05451D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2px;
+        }
+
+        #video-container {
+            width: 1090px;
+            height: 720px;
+            overflow: hidden;
+        }
+
+        #video-list {
+            float: left;
+        }
+
+        #video-list button {
+            display: block;
+            width: 710px;
+            height: 200px;
+            background-color: #FFE100;
+            color: #0A0A0A;
+            border: none;
+            padding: 50px 300px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            overflow: scroll;
+            font-size: 35px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: -7px 9px #181616;
+        }
+
+        #video-list button:hover {
+            background-color: #9A8800;
+        }
+
+        #video-list button:active{
+            
+            background-color: #a59202;
+            box-shadow: -4px 7px #000000;
+            transform: translateY(4px);
+        }
+        .scrollable-div {
+            width: 900px;
+            height: 700px;
+            overflow: auto;
+            padding: 10px;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="video-list" class="scrollable-div">
+        <button onclick="loadVideo('Sinal - TCHAU.mp4')">Tchau!</button>
+        <button onclick="loadVideo('Sinal - OBRIGADO.mp4')">Obrigado!</button>
+        <button onclick="loadVideo('Sinal - SINAL.mp4')">Sinal</button>
+        <button onclick="loadVideo('Sinal - SAUDADE.mp4')">Saudade</button>
+        <button onclick="loadVideo('Sinal - POSSO.mp4')">Posso</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+        <button onclick="loadVideo('Sinal - .mp4')">-----</button>
+</div>
+
+<div id="video-container">
+        <video id="my-video">
+            Seu navegador não suporta vídeos.
+        </video>
+</div>
+
+<script>
+
+    var video = document.getElementById("my-video");
+    function loadVideo(videoSource) {
+            video.src = videoSource;
+            video.load();
+            video.play();
+        }
+
+</script>
+
+</body>
+</html>
